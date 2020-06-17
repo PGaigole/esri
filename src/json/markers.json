@@ -1,0 +1,32 @@
+[
+  {
+    "id": "5ee9eb01ccfbe41398f1d166",
+    "assetID": "EntityDevice10",
+    "eventDateTime": "2020-06-17T10:04:37Z",
+    "properties": [{ "X": "51.32271", "Y": "-114.00171", "Z": 12.26 }]
+  },
+  {
+    "id": "5ee9eb04ccfbe41398f1d169",
+    "assetID": "EntityDevice11",
+    "eventDateTime": "2020-06-17T10:04:37Z",
+    "properties": [{ "X": "53.39594", "Y": "-112.89621", "Z": 12.26 }]
+  },
+  {
+    "id": "5ee9eb00ccfbe41398f1d164",
+    "assetID": "EntityDevice12",
+    "eventDateTime": "2020-06-17T10:04:36Z",
+    "properties": [{ "X": "53.00036", "Y": "-111.52389", "Z": 12.26 }]
+  },
+  {
+    "id": "5ee9eb04ccfbe41398f1d16a",
+    "assetID": "EntityDevice13",
+    "eventDateTime": "2020-06-17T10:04:36Z",
+    "properties": [{ "X": "53.34953", "Y": "-110.62748", "Z": 12.26 }]
+  },
+  {
+    "id": "5ee9eaffccfbe41398f1d15e",
+    "assetID": "EntityDevice14",
+    "eventDateTime": "2020-06-17T10:04:36Z",
+    "properties": [{ "X": "53.32968", "Y": "-111.09771", "Z": 12.26 }]
+  }
+]
