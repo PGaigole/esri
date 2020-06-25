@@ -31,6 +31,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
   // main map view
   private mapView;
+  // Variable to hold marker instances
+  markerArr = [];
   constructor() {}
 
   ngOnInit() {
@@ -42,6 +44,14 @@ export class AppComponent implements OnInit, OnDestroy {
     //   //   this.getTelemetry();
     //   this.getVehiclesLocation();
     // }, 10000);
+    // Removing marker after 10 sec
+    setTimeout(() => {
+      this.clearGraphics();
+    }, 10000);
+    // Again adding marker after 20 sec
+    setTimeout(() => {
+      this.addGraphics();
+    }, 20000);
   }
 
   async initMapView() {
@@ -121,12 +131,32 @@ export class AppComponent implements OnInit, OnDestroy {
       geometry: point,
       symbol: markerSymbol,
     });
+    // Code to hold the marker instances
+    this.markerArr.push(pointGraphic);
     // this.mapView.graphics.remove(pointGraphic);
     this.mapView.graphics.add(pointGraphic);
   }
 
   findMapCenter(input) {
     return [Number(input.properties[0].Y), Number(input.properties[0].X)];
+  }
+
+  // Function to clear marker
+  clearGraphics() {
+    this.markerArr.forEach((item) => {
+      this.mapView.graphics.remove(item);
+    });
+    this.markerArr = [];
+  }
+
+  // Function to adding marker again.
+  addGraphics() {
+    this.vehicleLocations.forEach((item) => {
+      this.addPointToMap(
+        Number(item.properties[0].X),
+        Number(item.properties[0].Y)
+      );
+    });
   }
 
   getVehiclesLocation() {
